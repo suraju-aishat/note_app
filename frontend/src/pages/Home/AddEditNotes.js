@@ -28,7 +28,7 @@ const AddEditNotes = ({ noteData, type, getAllNotes, onClose, showToastMessage }
             Authorization: `Bearer ${token}`
         }
         
-        const response = await axios.post("http://localhost:5001/add-note", data, {headers});
+        const response = await axios.post("https://note-app-api-nine.vercel.app//add-note", data, {headers});
 
         
         if (response.data && response.data.note) {
@@ -59,7 +59,7 @@ const AddEditNotes = ({ noteData, type, getAllNotes, onClose, showToastMessage }
             Authorization: `Bearer ${token}`
         }
         
-        const response = await axios.put("http://localhost:5001/edit-note/" + noteId, data, {headers});
+        const response = await axios.put("https://note-app-api-nine.vercel.app//edit-note/" + noteId, data, {headers});
 
         
         if (response.data && response.data.note) {
