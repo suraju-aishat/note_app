@@ -32,7 +32,7 @@ const LoginPage = () => {
 
         //Login API Call
         try {
-            const response = await axios.post( "http://localhost:5001/login", {
+            const response = await axios.post( "https://note-app-api-nine.vercel.app/login", {
                 email: email,
                 password: password,
             });
