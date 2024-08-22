@@ -39,7 +39,7 @@ const SignUpPage = () => {
         // SIgnup API Call
 
         try {
-            const response = await axios.post( "https://note-app-api-nine.vercel.app//create-account", {
+            const response = await axios.post( "https://note-app-api-one.vercel.app//create-account", {
                 fullName: name,
                 email: email,
                 password: password,
