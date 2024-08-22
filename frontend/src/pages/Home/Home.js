@@ -65,7 +65,7 @@ const Home = () => {
        const headers= {
         Authorization: `Bearer ${token}`
       }
-      const response = await axios.get("http://localhost:5001/get-user", {headers});
+      const response = await axios.get("https://note-app-api-nine.vercel.app//get-user", {headers});
       if (response.data && response.data.user) {
         setUserInfo(response.data.user);
       }
@@ -87,7 +87,7 @@ const Home = () => {
        const headers= {
         Authorization: `Bearer ${token}`
       }
-      const response = await axios.get("http://localhost:5001/get-all-notes", {headers});
+      const response = await axios.get("https://note-app-api-nine.vercel.app//get-all-notes", {headers});
 
       if (response.data && response.data.notes) {
         setAllNotes(response.data.notes);
@@ -110,7 +110,7 @@ const Home = () => {
             Authorization: `Bearer ${token}`
         }
         
-        const response = await axios.delete("http://localhost:5001/delete-note/" + noteId, {headers});
+        const response = await axios.delete("https://note-app-api-nine.vercel.app//delete-note/" + noteId, {headers});
 
         
         if (response.data && !response.data.error) {
@@ -135,7 +135,7 @@ const Home = () => {
             Authorization: `Bearer ${token}`
         }
         
-        const response = await axios.get("http://localhost:5001/search-notes" , {
+        const response = await axios.get("https://note-app-api-nine.vercel.app//search-notes" , {
           headers,
           params: {query},
           
@@ -165,7 +165,7 @@ const Home = () => {
         isPinned: !noteData.isPinned
       }
 
-      const response = await axios.put("http://localhost:5001/update-note-pinned/" + noteId, Pinned, {headers});
+      const response = await axios.put("https://note-app-api-nine.vercel.app//update-note-pinned/" + noteId, Pinned, {headers});
       
       if (response.data && response.data.note) {
         showToastMessage("Note Pinned Successfully");
