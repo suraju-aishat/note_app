@@ -20,7 +20,9 @@ const PORT = process.env.PORT || 5001;
 // Controller setup
 app.use(
     cors({
-        origin: "*"
+        origin: ["httos://note_app.vercel.app"],
+        /*methods: ["POST", "GET"],*/
+        credentials: true
     })
 )
 
